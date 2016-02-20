@@ -5,7 +5,7 @@
  * VTK 5.10
  * g++ --shared -I $VTK_INCLUDE_DIR foo.cpp -L $VTK_LIBRARY_DIR -l vtkCommon -l vtkFiltering -o foo.so
  * VTK 6.3
- * g++ --shared -I $VTK_INCLUDE_DIR foo.cpp -L $VTK_LIBRARY_DIR -l vtkCommonDataModel-6.3 -l vtkCommonCore-6.3 -o foo.so
+ * g++ --shared -I $VTK_INCLUDE_DIR foo.cpp -L $VTK_LIBRARY_DIR -l vtkCommonDataModel-6.3 -l vtkCommonCore-6.3 -fPIC -o foo.so
  * VTK_INCLUDE_DIR and VTK_LIBRARY_DIR are the directories where the VTK include and library files 
  * are installed.
  */
