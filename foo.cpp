@@ -15,6 +15,6 @@
 
 extern "C"
 void foo(vtkPolyData* pdata) {
-    std::cout << "Number of points: " << pdata->GetNumberOfPoints() << '\n';
+    std::cout << "Number of points (C++): " << pdata->GetNumberOfPoints() << '\n';
 }
 

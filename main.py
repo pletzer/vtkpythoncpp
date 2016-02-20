@@ -11,7 +11,11 @@ pdata = reader.GetOutput()
 # Get the address of the underlying c++ object as 
 # a string and convert the hex into an integer. 
 # Note: must filter out 'Addr=', hence [5,:]
+print pdata.GetAddressAsString('vtkPolyData')
+print pdata.GetAddressAsString('vtkPolyData')[5:]
+print int(pdata.GetAddressAsString('vtkPolyData')[5:], 16)
 addr = int(pdata.GetAddressAsString('vtkPolyData')[5:], 16)
+print 'Number of points (python): ', pdata.GetNumberOfPoints()
 
 # Open the shared library. You might need to set 
 # LD_LIBRARY_PATH (on Linux/Solaris) or DYLD_LIBRARY_PATH
